@@ -44,10 +44,10 @@ let quotes = [
    - Cse the random number to `return` a random quote object from the `quotes` array.
 ***/
 function getRandomQuote() {
-  var randomQuote = Math.floor(Math.random() * quotes.lenght);
+  let randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 }
-
+console.log(getRandomQuote);
 /***
   Create the `printQuote` function to: 
    - +Call the `getRandomQuote` function and assign it to a variable.
@@ -62,7 +62,7 @@ function getRandomQuote() {
 ***/
 
 function printQuote() {
-  var printOneQuote = getRandomQuote();
+  let printOneQuote = getRandomQuote();
   let string = '';
     string += "<p class= 'quote'>" + printOneQuote.quote + '</p>'; 
     string += "<p class= 'source'>" + printOneQuote.source;
@@ -74,30 +74,9 @@ function printQuote() {
 
   document.getElementById("quote-box").innerHTML = string;
   printQuote();
-//"<p class='quote'>" + actualQuote.quote +"</p> <p class='source'>" + actualQuote.source + " " + actualQuote.year + "</p>"
-  //printOneQuote.getElementById("quote");
+
 
 }
-// function printQuote() {
-
-//  var quotecall = getRandomQuote();
-
-//  var html = ‘’; “<p class=‘quotes’>” + print.quotes + “</p>“;
-
-//  html += “<p class=’source>” + print.source + “</p>“;
-
-//  var element = document.getElementById(quotes).innerHTML = html;}
-// // function printQuote() {
-//   console.log("clicked")
-//   actualQuote = getRandomQuote(quotes); /* printQuote function calls getRandomQuote */
-//   stringOfQuoteProperties = "";
-//   stringOfQuoteProperties += "<p class='quote'>" + actualQuote.quote +"</p> <p class='source'>" + actualQuote.source + " " + actualQuote.year + "</p>"
-//   if (actualQuote.year.hasOwnProperty()) {
-//     stringOfQuoteProperties += "<span class='year'>" + actualQuote.year + "</span>";
-//   } else {} /* adds year property of quote, if there is one */
-
-//   document.getElementById("quote-box").innerHTML = stringOfQuoteProperties; /* printQuote function should display the completed HTML */
-
 
 /***
   When the "Show another quote" button is clicked, the event listener 
@@ -107,6 +86,3 @@ function printQuote() {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.

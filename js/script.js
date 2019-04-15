@@ -35,7 +35,7 @@ function getRandomQuote() {
   return quotes[randomQuote];
 }
 function makeRandomColor() {
-      let colors = ['blue', 'green','red','purple'];
+      let colors = ["#5d77a3", '#2c706b','#3b8957','#6645a0', '#84475b', '#bc4b6f' ];
       let color = Math.floor(Math.random() * colors.length);
       // let randomColor = 
       return colors[color];

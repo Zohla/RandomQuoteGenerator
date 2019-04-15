@@ -34,6 +34,12 @@ function getRandomQuote() {
   let randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 }
+function makeRandomColor() {
+      let colors = ['blue', 'green','red','purple'];
+      let color = Math.floor(Math.random() * colors.length);
+      // let randomColor = 
+      return colors[color];
+    }
 
 /***Prints a random quote to the quote-box in index.html***/
 function printQuote() {
@@ -51,6 +57,12 @@ function printQuote() {
       string += "<p class='tag'>" + printOneQuote.tag;
     } 
     string += '</p>'
+
+
+    
+  /***Changes the background color of body when button is clicked***/
+  document.body.style.backgroundColor = makeRandomColor();
+
 
 /***Writes the string to the id: 'quote-box' in the html***/
   document.getElementById("quote-box").innerHTML = string;

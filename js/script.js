@@ -15,9 +15,9 @@ project 1 - A Random Quote Generator
   Use console.log() to log your array of quotes to the console.
 ***/
 
-//let randomQuote;
 
-//tested and working. Quotes.
+
+//tested and working. /**Quotes**/
 let quotes = [
   {quote:"Code is like humor. When you have to explain it, it’s bad." , source: 'Cory House'},
   {quote: "One of the best programming skills you can have is knowing when to walk away for awhile.", source:  'Oscar Godson'},
@@ -35,19 +35,16 @@ let quotes = [
   {quote:"Every great developer you know got there by solving problems they were unqualified to solve until they actually did it." , source:"Patrick McKenzie"}
 ] ;
 
-// let print = '';
-// // let printOneQuote;
-// let randomQuote;
+
 /***
-  Create the `getRandomQuote` function to:
-   - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+   Makes a random number and stores it in randomQuote. 
+   Returns a random quotes object from the array
 ***/
 function getRandomQuote() {
   let randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 }
-console.log(getRandomQuote);
+
 /***
   Create the `printQuote` function to: 
    - +Call the `getRandomQuote` function and assign it to a variable.
@@ -57,23 +54,26 @@ console.log(getRandomQuote);
    - Add the quote and source section to the HTML string.
    - Use an if statement to check for the citation property before adding it to the HTML string.
    - Use an if statement to check for the year property before adding it to the HTML string.
-   - Don't forget to close that final `p` tag.
-   - Set the `innerHTML` of the `quote-box` div to the HTML string. 
+. 
 ***/
-
+/***Prints a random quote to the quote-box in index.html***/
 function printQuote() {
-  let printOneQuote = getRandomQuote();
+  let printOneQuote = getRandomQuote(); //gets random quote from calling the function and stores it in the variable.
   let string = '';
-    string += "<p class= 'quote'>" + printOneQuote.quote + '</p>'; 
-    string += "<p class= 'source'>" + printOneQuote.source;
-    if (printOneQuote.citation) {
-      string += "<span class= 'citation'>" + printOneQuote.citation + '</span></p>';
-    } else {
-    string += '</p>'
+    string += "<p class= 'quote'>" + printOneQuote.quote + '</p>'; //adds the quote part of the object
+    string += "<p class= 'source'>" + printOneQuote.source;        //adds the source part of the object
+    if (printOneQuote.citation) { //checks if there is a citation key in the object
+      string += "<span class= 'citation'>" + printOneQuote.citation + '</span>'; //adds the citation of the object
     }
+    if (printOneQuote.year) {
+      string += "<span class='year'>" + printOneQuote.year + "</span>" //adds the year of the object
+    }
+     
+    string += '</p>'
 
+/***Writes the string to the id: 'quote-box' in the html***/
   document.getElementById("quote-box").innerHTML = string;
-  printQuote();
+  printQuote(); //calls the function printQuote
 
 
 }

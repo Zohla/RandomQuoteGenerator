@@ -59,7 +59,6 @@ function printQuote() {
     string += '</p>'
 
 
-    
   /***Changes the background color of body when button is clicked***/
   document.body.style.backgroundColor = makeRandomColor();
 
@@ -69,6 +68,11 @@ function printQuote() {
   printQuote(); //calls the function 
 }
 
+// function autoChangeQuote() {
+//   document.getElementById("quote-box").innerHTML = string;
+// }
+
+setInterval(printQuote,10000);
 /***
   When the "Show another quote" button is clicked, the event listener 
   below will be triggered, and it will call, or "invoke", the `printQuote` 

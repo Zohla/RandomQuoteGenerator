@@ -2,12 +2,6 @@
 Treehouse FSJS Techdegree:
 project 1 - A Random Quote Generator
 ******************************************/
-
-// Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
-
-
-
-
 /**Quotes**/
 let quotes = [
   {quote:"Code is like humor. When you have to explain it, it’s bad." , source: 'Cory House', tag: 'humor'},
@@ -34,6 +28,10 @@ function getRandomQuote() {
   let randomQuote = Math.floor(Math.random() * quotes.length);
   return quotes[randomQuote];
 }
+
+/***
+   Takes a random color from the array colors.
+***/
 function makeRandomColor() {
       let colors = ["#5d77a3", '#2c706b','#3b8957','#6645a0', '#84475b', '#bc4b6f' ];
       let color = Math.floor(Math.random() * colors.length);
@@ -41,7 +39,9 @@ function makeRandomColor() {
       return colors[color];
     }
 
-/***Prints a random quote to the quote-box in index.html***/
+/***
+Prints a random quote to the quote-box in index.html
+***/
 function printQuote() {
   let printOneQuote = getRandomQuote(); //gets random quote from calling the function and stores it in the variable.
   let string = '';
@@ -54,7 +54,7 @@ function printQuote() {
       string += "<span class='year'>" + printOneQuote.year + "</span>" //adds the year of the object
     }
     if (printOneQuote.tag) {
-      string += "<p class='tag'>" + printOneQuote.tag;
+      string += "<p class='tag'>" + printOneQuote.tag; //adds tag
     } 
     string += '</p>'
 
@@ -68,10 +68,8 @@ function printQuote() {
   printQuote(); //calls the function 
 }
 
-// function autoChangeQuote() {
-//   document.getElementById("quote-box").innerHTML = string;
-// }
 
+/***Automatically changes the quote and background color after the set time***/
 setInterval(printQuote,10000);
 /***
   When the "Show another quote" button is clicked, the event listener 

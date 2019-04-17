@@ -71,6 +71,14 @@ body {
   font-style: normal;
 }
 
+.tag {
+  font-size: 1rem;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  padding:.5em;
+  border:.5px dashed #fff;
+  display: inline-block;
+}
 #loadQuote {
   position: fixed;
   width: 12em;

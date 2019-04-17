@@ -65,9 +65,9 @@ function printQuote() {
 
 /***Writes the string to the id: 'quote-box' in the html***/
   document.getElementById("quote-box").innerHTML = string;
-  printQuote(); //calls the function 
+   
 }
-
+printQuote();//calls the function 
 
 /***Automatically changes the quote and background color after the set time***/
 setInterval(printQuote,10000);

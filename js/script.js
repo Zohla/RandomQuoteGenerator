@@ -54,7 +54,7 @@ function printQuote() {
       string += "<span class='year'>" + printOneQuote.year + "</span>" //adds the year of the object
     }
     if (printOneQuote.tag) {
-      string += "<p class='tag'>" + printOneQuote.tag; //adds tag
+      string += "<p class='tag'>" + printOneQuote.tag + '</p>'; //adds tag
     } 
     string += '</p>'
 

@@ -12,6 +12,7 @@ let quotes = [
   {quote:"We are looking at a society increasingly dependent on machines, yet decreasingly capable of making or even using them effectively." , source:" Douglas Rushkoff", citation: "Program or Be Programmed: Ten Commands for a Digital Age", tag:'humor' },
   {quote:"I'm a programmer. I like programming. And the best way I've found to have a positive impact on code is to write it." , source:" Robert C. Martin", tag: 'inspirational'},
   {quote:"If you can write 'hello world' you can change the world" , source:"Raghu Venkatesh", tag:'inspirational'},
+  {quote:"This coding stuff can really be frustrating, but it's so worth it when you finally crush a nasty bug or manage to make something you can be proud of", source: 'Maren Lilleberre', year: '18.04.2019'},
   {quote:"Programming isn't about what you know; it's about what you can figure out." , source:"Chris Pine", tag:'inspirational'},
   {quote:"The happiest moment i felt; is that moment when i realized my ability to create." , source:"Dr. Hazem Ali", tag:'inspirational'},
   {quote:"Think twice, code once." , source:"Waseem Latif", tag:'wisdom'},
